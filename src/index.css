@@ -9,6 +9,7 @@
 }
 
 :root {
+    --white:#ffff;
     --red: #df2020;
     --pink: #fde4e4;
     --blue: #212245;
@@ -16,3 +17,11 @@
     --primary-font-family: 'Istok Web', sans-serif;
     --secondary-font-family: "RocknRoll One", sans-serif
 }
+
+/*  Media
+@media(max-width:1300px) {}
+@media(max-width:1200px) {}
+@media(max-width:1050px) {}
+@media(max-width:767px) {}
+@media(max-width:428px) {}
+*/

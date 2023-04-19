@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { common } from "../Navbar/style";
 
 export const Container = styled.div`
     width: 100%;
@@ -6,8 +7,7 @@ export const Container = styled.div`
     height:352px ;
 `
 export const Wrapper = styled.div`
-    max-width:1440px;
-    width: 100%;
+    ${common}
     padding:50px;
     margin: 20px auto;
 

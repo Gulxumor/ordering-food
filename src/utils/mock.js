@@ -2,7 +2,8 @@ import CartPage from "../components/CartPage";
 import ContactPage from "../components/ContactPage";
 import FoodsPage from "../components/FoodsPage";
 import Home from "../components/Home";
-import { Login, Register } from "../components/Login";
+import Login from "../components/Login/Login";
+import Register from "../components/Login/Register";
 import Product from "../components/Product";
 
 export const navbar = [

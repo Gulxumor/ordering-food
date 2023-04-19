@@ -1,5 +1,6 @@
 import React from 'react'
-import ContactPage from "../components/Navbar";
+import Navbar from "../components/Navbar";
+import Home from "../components/Home";
 // import i18next from 'i18next';
 // import { initReactI18next } from 'react-i18next';
 // import { ar } from "../locale/ar";
@@ -22,7 +23,8 @@ const Root = () => {
   //   });
   return (
     <div>
-      <ContactPage />
+      <Navbar />
+      <Home />
     </div>
   );
 };

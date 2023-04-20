@@ -90,6 +90,14 @@ export const en = {
         john: "John Doe",
         mitchell: "Mitchell Marsh",
     },
+    routes: {
+        home: "/home",
+        foods: "/foods",
+        cart: "/cart",
+        contact: "/contact",
+        login: "/login",
+        register: "/register",
+    },
 
 }
 

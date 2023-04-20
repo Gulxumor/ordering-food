@@ -1,7 +1,8 @@
-import CartPage from "../components/CartPage";
-import ContactPage from "../components/ContactPage";
-import FoodsPage from "../components/FoodsPage";
-import Home from "../components/Home";
+import CartPage from "../components/Pages/CartPage";
+import ContactPage from "../components/Pages/ContactPage";
+import FoodsPage from "../components/Pages/Foods";
+import Footer from "../components/Footer";
+import Home from "../components/Pages/Home";
 import Login from "../components/Login/Login";
 import Register from "../components/Login/Register";
 import Product from "../components/Product";
@@ -10,7 +11,7 @@ export const navbar = [
     {
         id: 1,
         title: 'Home',
-        path: '/home',
+        path: '/',
         element: <Home />,
         isPrivate: false,
         hidden: false,
@@ -60,6 +61,14 @@ export const navbar = [
         title: 'Register',
         path: '/Register',
         element: <Register />,
+        isPrivate: false,
+        hidden: true,
+    },
+    {
+        id: 7,
+        title: 'Footer',
+        path: '*',
+        element: <Footer />,
         isPrivate: false,
         hidden: true,
     },

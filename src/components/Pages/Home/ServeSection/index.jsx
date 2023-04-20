@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, ImagesWrapper, Top, Wrapper } from "./style";
-import deliver from "../../../assets/images/quickDelivery.jpg";
-import dineIn from "../../../assets/images/superDineIn.jpg";
-import easy from "../../../assets/images/easyPickUp.jpg";
+import deliver from "../../../../assets/images/quickDelivery.jpg";
+import dineIn from "../../../../assets/images/superDineIn.jpg";
+import easy from "../../../../assets/images/easyPickUp.jpg";
 
 const foods = [
   {

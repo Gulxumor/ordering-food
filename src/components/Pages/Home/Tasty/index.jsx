@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Desc, Image, Text, Title, Wrapper } from "./style";
 import { AiFillCheckCircle } from "react-icons/ai";
-import location from "../../../assets/images/phoneLocation.jpg";
+import location from "../../../../assets/images/phoneLocation.jpg";
 
 const foods = [
   {
@@ -30,7 +30,7 @@ const Tasty = () => {
           <Title>
             <span>Why</span> Tasty Treat?
           </Title>
-          <Desc d>
+          <Desc desc>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
             minus. Tempora reprehenderit a corporis velit, laboriosam vitae
             ullam, repellat illo sequi odio esse iste fugiat dolor, optio

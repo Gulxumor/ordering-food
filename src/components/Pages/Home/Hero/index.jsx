@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import { RiShieldCheckLine } from "react-icons/ri";
 import { AiFillCar } from "react-icons/ai";
-import girl from "../../../assets/images/deliver.png";
-import fastfood from "../../../assets/images/fastfood.jpg";
-import pizza from "../../../assets/images/pizza.jpg";
-import asianFood from "../../../assets/images/asianFood.jpg";
-import rowMeat from "../../../assets/images/rowMeat.jpg";
+import girl from "../../../../assets/images/deliver.png";
+import fastfood from "../../../../assets/images/fastfood.jpg";
+import pizza from "../../../../assets/images/pizza.jpg";
+import asianFood from "../../../../assets/images/asianFood.jpg";
+import rowMeat from "../../../../assets/images/rowMeat.jpg";
 import { BtnWrapper, Container, Div, Wrapper, TextWrapper } from "./style";
 
 const Hero = () => {

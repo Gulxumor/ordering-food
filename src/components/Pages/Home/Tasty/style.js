@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import { common } from "../../Navbar/style";
+import { common } from "../../../Navbar/style";
 
 export const Container = styled.div`
     width: 100%;
 `
 export const Wrapper = styled.div`
     ${common}
-    height: 756px;
     display: flex;
     flex: 1;
 `
@@ -14,7 +13,6 @@ export const Image = styled.img`
     width: 636px;
     height: 636px;
     flex: 1;
-
 `
 Wrapper.Wrapper = styled.div`
     flex: 1;
@@ -55,9 +53,9 @@ export const Text = styled.h3`
 `
 export const Desc = styled.h3`
     font-weight: 400;
-    height: ${({ d }) => d ? "83px" : "47px"}; 
-    width: ${({ d }) => d ? "610px" : "660px"}; 
-    line-height: ${({ d }) => d ? "28px" : "24px"};
+    height: ${({ desc }) => desc ? "83px" : "47px"}; 
+    width: ${({ desc }) => desc ? "610px" : "660px"}; 
+    line-height: ${({ desc }) => desc ? "28px" : "24px"};
     color: var(--gray);
     margin-bottom: 15px;
 `

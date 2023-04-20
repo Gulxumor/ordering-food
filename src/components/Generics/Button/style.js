@@ -42,9 +42,6 @@ const Container = styled.button`
   :active {
     transform: scale(0.97);
   }
-  :hover{
-    background:${({ h }) => h ? "var(--blue)" : ""}
-  }
 `
 
 export { Container }

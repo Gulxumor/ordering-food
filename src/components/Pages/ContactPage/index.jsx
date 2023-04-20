@@ -1,6 +1,7 @@
-import { Button, Checkbox, Form, Input } from "antd";
+import { Button, Form, Input } from "antd";
 import React from "react";
-import { Toptext } from "../Footer/style";
+import Footer from "../../Footer";
+import { Toptext } from "../../Footer/style";
 
 const ContactPage = () => {
   const onFinish = (values) => {
@@ -85,6 +86,7 @@ const ContactPage = () => {
           </Form.Item>
         </Form>
       </div>
+      <Footer />
     </div>
   );
 };

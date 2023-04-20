@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { common } from "../../Navbar/style";
+import { common } from "../../../Navbar/style";
 
 export const Container = styled.div`
     width: 100%;

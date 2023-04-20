@@ -7,40 +7,19 @@ import {
   Title,
   Price,
 } from "./style";
-import { Rate } from "antd";
-import Stack from "@mui/material/Stack";
 import Button from "../Button";
 
-export const Card = ({ product, onClick }) => {
-  // Create our number formatter.
-  const formatter = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    // These options are needed to round to whole numbers if that's what you want.
-    //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
-    //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
-  });
+export const Card = ({ id, title, img, price, onClick }) => {
   return (
-    <Container onClick={onClick}>
+    <Container onClick={onClick} key={id}>
+      <ImageWrapper>
+        <ImageWrapper.Image src={img} alt={title || "card"} loading="lazy" />
+      </ImageWrapper>
       <Wrapper>
-        <ImageWrapper>
-          <ImageWrapper.Image
-            src={product?.featuredImage}
-            alt={product?.title | "card"}
-            loading="lazy"
-          />
-        </ImageWrapper>
+        <Title>{title}</Title>
         <Content>
-          <Stack spacing={1}>
-            <Rate
-              name="half-rating"
-              defaultValue={product?.rating[0]}
-              precision={product?.rating[1]}
-            />
-          </Stack>
-          <Title>{product?.title}</Title>
-          <Price>{formatter.format(product?.price)}</Price>
-          <Button type="secondary">Buy Now</Button>
+          <Price>${price}</Price>
+          <Button type="primary">Buy Now</Button>
         </Content>
       </Wrapper>
     </Container>

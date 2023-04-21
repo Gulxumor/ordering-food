@@ -1,8 +1,14 @@
 import React from "react";
-import { Container } from "./style";
+import AllFoods from "./AllFoods";
+import FoodsCards from "./FoodsCards";
 
 const Foods = () => {
-  return <Container>All Foods</Container>;
+  return (
+    <div>
+      <AllFoods />
+      <FoodsCards />
+    </div>
+  );
 };
 
 export default Foods;

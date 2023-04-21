@@ -15,7 +15,7 @@ const Container = styled.div`
 
   display: flex;
   height: 293px;
-  width: 306px;
+  width: ${({ f }) => f ? "294px" : "306px"};
   border: 1px solid var(--pink);
   text-align: center;
   flex-direction: column;

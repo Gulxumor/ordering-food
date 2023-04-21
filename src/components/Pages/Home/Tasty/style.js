@@ -35,7 +35,7 @@ export const Title = styled.h1`
     font-family: var(--secondary-font-family);
     font-weight: 600;
     line-height: 40px;
-    color:var(--red);
+    color:${({ f }) => f ? "var(--white)" : "var(--red)"};
     margin: 25px 0;
 
     span{

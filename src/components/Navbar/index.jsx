@@ -59,7 +59,7 @@ const Navbar = () => {
               <option value="ru">RU</option>
             </Icons.Select> */}
             <RiShoppingBasketLine className="nav-icon" />
-            <AiOutlineUser className="nav-icon" />
+            <AiOutlineUser className="nav-icon" onClick={()=>navigate("/login")} />
           </Icons>
         </Wrapper>
       </Container>

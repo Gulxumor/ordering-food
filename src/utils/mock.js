@@ -3,8 +3,8 @@ import ContactPage from "../components/Pages/ContactPage";
 import FoodsPage from "../components/Pages/Foods";
 import Footer from "../components/Footer";
 import Home from "../components/Pages/Home";
-import Login from "../components/Login/Login";
-import Register from "../components/Login/Register";
+import Login from "../components/Pages/Login/Login";
+import Register from "../components/Pages/Login/Register";
 import Product from "../components/Product";
 
 export const navbar = [

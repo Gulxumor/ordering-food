@@ -32,6 +32,7 @@ Wrapper.Top.InputWrapper.Input = styled.input`
     width: 660px;
     font-size: 20px;
     border:none;
+    outline: none;
 `
 Wrapper.Top.Select = styled.select`
     ${foods}

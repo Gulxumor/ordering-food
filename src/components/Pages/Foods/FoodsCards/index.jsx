@@ -35,7 +35,7 @@ const FoodsCards = () => {
                 : item.title.toLowerCase().includes(search);
             })
             .map(({ id, title, img, price }) => (
-              <Card f key={id} img={img} title={title} price={price} />
+              <Card f key={id} img={img} title={title} price={price} id={id} />
             ))}
         </Wrapper.Bottom>
       </Wrapper>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Container,
   Icons,
@@ -14,10 +14,16 @@ import { RiShoppingBasketLine } from "react-icons/ri";
 import { AiOutlineUser } from "react-icons/ai";
 import { navbar } from "../../utils/mock";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
-import i18next from "i18next";
+// import i18next from "i18next";
+import { useDispatch, useSelector } from "react-redux";
+import { setCartDrawerVisibility } from "../../store/DrawerSlice";
+import CartDrawer from "./CartDrawer";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { cartDrawerVisibility } = useSelector((state) => state.cartDrawer);
+  console.log(cartDrawerVisibility, "drawer");
   return (
     <>
       <Container>
@@ -58,11 +64,18 @@ const Navbar = () => {
               <option value="uz">UZ</option>
               <option value="ru">RU</option>
             </Icons.Select> */}
-            <RiShoppingBasketLine className="nav-icon" />
-            <AiOutlineUser className="nav-icon" onClick={()=>navigate("/login")} />
+            <RiShoppingBasketLine
+              className="nav-icon"
+              onClick={() => dispatch(setCartDrawerVisibility())}
+            />
+            <AiOutlineUser
+              className="nav-icon"
+              onClick={() => navigate("/login")}
+            />
           </Icons>
         </Wrapper>
       </Container>
+      <CartDrawer />
       <Outlet />
     </>
   );

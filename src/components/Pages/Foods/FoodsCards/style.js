@@ -47,5 +47,6 @@ Wrapper.Top.Select.Option = styled.option`
 Wrapper.Bottom = styled.div`
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 25px;
+    justify-content: space-between;
 `

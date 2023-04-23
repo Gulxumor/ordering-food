@@ -8,10 +8,13 @@ import {
   Price,
 } from "./style";
 import Button from "../Button";
+import { ADD_PRODUCT } from "../../../store/ProductsSlice";
+import { useDispatch } from "react-redux";
 
-export const Card = ({ id, title, img, price, onClick }) => {
+export const Card = ({ id, title, img, price }) => {
+  const dispatch = useDispatch();
   return (
-    <Container onClick={onClick} key={id}>
+    <Container>
       <ImageWrapper>
         <ImageWrapper.Image src={img} alt={title || "card"} loading="lazy" />
       </ImageWrapper>
@@ -19,7 +22,12 @@ export const Card = ({ id, title, img, price, onClick }) => {
         <Title>{title}</Title>
         <Content>
           <Price>${price}</Price>
-          <Button type="primary">Buy Now</Button>
+          <Button
+            onClick={() => dispatch(ADD_PRODUCT({ product_id: id }))}
+            type="primary"
+          >
+            Buy Now
+          </Button>
         </Content>
       </Wrapper>
     </Container>

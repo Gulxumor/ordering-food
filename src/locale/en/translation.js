@@ -98,6 +98,22 @@ export const en = {
         login: "/login",
         register: "/register",
     },
+    contact: {
+        lorem: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab architecto eum totam non exercitationem illum nisi sequi atque blanditiis ea? Officiis culpa vero est adipisci?",
+        office: "Naples Office",
+        location: "ZindaBazar, Sylhet-3100, Bangladesh",
+        ul: " What you get when asking your question",
+        less: "Less than 12 hours response to your question",
+        expertise: "  Thoroughtness and expertise and a Certified Exchange Specialist",
+        plan: "Plan of action summarized in an email follow up",
+        send: "Send",
+    },
+    login: {
+        login_title: "Login",
+        register: "Register",
+        create: "Don't have an account? Create an account",
+        login:"Already have an account? Login",
+    },
 
 }
 

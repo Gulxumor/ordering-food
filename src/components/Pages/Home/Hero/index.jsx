@@ -9,27 +9,27 @@ import pizza from "../../../../assets/images/pizza.jpg";
 import asianFood from "../../../../assets/images/asianFood.jpg";
 import rowMeat from "../../../../assets/images/rowMeat.jpg";
 import { BtnWrapper, Container, Div, Wrapper, TextWrapper } from "./style";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   return (
     <Container>
       <Wrapper>
         <TextWrapper>
-          <TextWrapper.TopText>Easy way to make an order</TextWrapper.TopText>
+          <TextWrapper.TopText>{t("hero.toptext")}</TextWrapper.TopText>
           <TextWrapper.Title>
-            <span>HUNGRY?</span> Just wait food at <span>your door</span>
+            <span>{t("hero.hungry")}</span> {t("hero.wait")}
+            <span>{t("hero.door")}</span>
           </TextWrapper.Title>
-          <TextWrapper.Text>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui magni
-            delectus tenetur autem, sint veritatis!
-          </TextWrapper.Text>
+          <TextWrapper.Text>{t("hero.lorem")}</TextWrapper.Text>
           <BtnWrapper>
             <BtnWrapper.Button b onClick={() => navigate("/contact")}>
-              Order Now <IoIosArrowForward />
+              {t("hero.order_now")} <IoIosArrowForward />
             </BtnWrapper.Button>
             <BtnWrapper.Button onClick={() => navigate("/foods")}>
-              See All Foods
+              {t("hero.see")}
             </BtnWrapper.Button>
           </BtnWrapper>
           <Div>
@@ -37,13 +37,13 @@ const Hero = () => {
               <Div.Wrapper>
                 <AiFillCar />
               </Div.Wrapper>
-              <p className="text">No shipping charge</p>
+              <p className="text">{t("hero.shipping")}</p>
             </div>
             <div className="wrapper">
               <Div.Wrapper>
                 <RiShieldCheckLine />
               </Div.Wrapper>
-              <p className="text">100% secure checkout</p>
+              <p className="text">{t("hero.checkout")}</p>
             </div>
           </Div>
         </TextWrapper>
@@ -55,7 +55,7 @@ const Hero = () => {
           <Container.HeroFooter.FooterWrapper.Content>
             <Container.HeroFooter.FooterWrapper.Content.Image src={fastfood} />
             <Container.HeroFooter.FooterWrapper.Content.Text>
-              Fastfood
+              {t("hero.fast_food")}
             </Container.HeroFooter.FooterWrapper.Content.Text>
           </Container.HeroFooter.FooterWrapper.Content>
         </Container.HeroFooter.FooterWrapper>
@@ -64,7 +64,7 @@ const Hero = () => {
           <Container.HeroFooter.FooterWrapper.Content>
             <Container.HeroFooter.FooterWrapper.Content.Image src={pizza} />
             <Container.HeroFooter.FooterWrapper.Content.Text>
-              Pizza
+              {t("hero.pizza")}
             </Container.HeroFooter.FooterWrapper.Content.Text>
           </Container.HeroFooter.FooterWrapper.Content>
         </Container.HeroFooter.FooterWrapper>
@@ -73,7 +73,7 @@ const Hero = () => {
           <Container.HeroFooter.FooterWrapper.Content>
             <Container.HeroFooter.FooterWrapper.Content.Image src={asianFood} />
             <Container.HeroFooter.FooterWrapper.Content.Text>
-              Asian Food
+              {t("hero.asian_food")}
             </Container.HeroFooter.FooterWrapper.Content.Text>
           </Container.HeroFooter.FooterWrapper.Content>
         </Container.HeroFooter.FooterWrapper>
@@ -82,7 +82,7 @@ const Hero = () => {
           <Container.HeroFooter.FooterWrapper.Content>
             <Container.HeroFooter.FooterWrapper.Content.Image src={rowMeat} />
             <Container.HeroFooter.FooterWrapper.Content.Text>
-              Row Meat
+              {t("hero.meat")}
             </Container.HeroFooter.FooterWrapper.Content.Text>
           </Container.HeroFooter.FooterWrapper.Content>
         </Container.HeroFooter.FooterWrapper>

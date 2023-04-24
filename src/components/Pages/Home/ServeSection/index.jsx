@@ -3,48 +3,51 @@ import { Container, ImagesWrapper, Top, Wrapper } from "./style";
 import deliver from "../../../../assets/images/quickDelivery.jpg";
 import dineIn from "../../../../assets/images/superDineIn.jpg";
 import easy from "../../../../assets/images/easyPickUp.jpg";
+import { useTranslation } from "react-i18next";
 
-const foods = [
-  {
-    id: 1,
-    img: deliver,
-    alt: "deliver",
-    title: "Quick Delivery",
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, doloremque.",
-  },
-  {
-    id: 2,
-    img: dineIn,
-    alt: "dineIn",
-    title: "Super Dine In",
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, doloremque.",
-  },
-  {
-    id: 3,
-    img: easy,
-    alt: "easy",
-    title: "Easy Pick Up",
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, doloremque.",
-  },
-];
+function useFoods() {
+  const { t } = useTranslation();
+  const foods = () => [
+    {
+      id: 1,
+      img: deliver,
+      alt: t("section.deliver"),
+      title: t("section.quick"),
+      text:  t("section.lorem2"),
+    },
+    {
+      id: 2,
+      img: dineIn,
+      alt: t("section.dineIn"),
+      title: t("section.dineIn"),
+      text:  t("section.lorem2"),
+    },
+    {
+      id: 3,
+      img: easy,
+      alt: t("section.easy"),
+      title: t("section.easy"),
+      text:  t("section.lorem2"),
+    },
+  ];
+  return { foods };
+}
 
 const Section = () => {
+  const { t } = useTranslation();
+  const { foods } = useFoods();
   return (
     <Container>
       <Wrapper>
         <Top>
-          <Top.TopText>What we serve</Top.TopText>
+          <Top.TopText>{t("section.toptext")}</Top.TopText>
           <Top.Title>
-            Just sit back at home we will <span>take care</span>
+            {t("section.title")} <span>{t("section.care")}</span>
           </Top.Title>
-          <Top.Description w>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor,
-            officiis? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Aperiam, eius.
-          </Top.Description>
+          <Top.Description w>{t("section.lorem1")}</Top.Description>
         </Top>
         <ImagesWrapper>
-          {foods.map(({ id, img, alt, title, text }) => (
+          {foods().map(({ id, img, alt, title, text }) => (
             <ImagesWrapper.Wrapper key={id}>
               <ImagesWrapper.Wrapper.Img src={img} alt={alt} />
               <ImagesWrapper.Wrapper.Title>{title}</ImagesWrapper.Wrapper.Title>

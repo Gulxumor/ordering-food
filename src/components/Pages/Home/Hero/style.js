@@ -96,7 +96,7 @@ BtnWrapper.Button = styled.button`
 `
 export const Div = styled.div`
     height: 43px;
-    width: 516px;
+    width: 600px;
     margin-top: 3rem;
     display: flex;
     align-items: center;

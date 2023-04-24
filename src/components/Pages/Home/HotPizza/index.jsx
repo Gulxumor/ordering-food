@@ -1,13 +1,15 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { products } from "../../../../utils/products";
 import Card from "../../../Generics/Card";
 import { Container, Wrapper } from "./style";
 
 const HotPizza = () => {
+  const { t } = useTranslation();
   return (
     <Container>
       <Wrapper>
-        <Wrapper.Title>Hot Pizza</Wrapper.Title>
+        <Wrapper.Title>{t("hot_pizza.hot_pizza")}</Wrapper.Title>
         <Wrapper.Wrapper>
           {products.map(
             ({ id, title, img, featured, price }) =>

@@ -1,12 +1,14 @@
 import React from "react";
 import { Section, Wrapper } from "./style";
 import { Title } from "../../../Home/Tasty/style";
+import { useTranslation } from "react-i18next";
 
 const Top = () => {
+  const { t } = useTranslation();
   return (
     <Section>
       <Wrapper>
-        <Title f>Register</Title>
+        <Title f>{t("top.register")}</Title>
       </Wrapper>
     </Section>
   );

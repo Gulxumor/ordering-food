@@ -1,5 +1,5 @@
 import React from "react";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import logo from "../../assets/images/logo.jpg";
 import { GrGithub, GrLinkedinOption, GrYoutube } from "react-icons/gr";
 import { RiFacebookFill, RiSendPlaneLine } from "react-icons/ri";
@@ -24,7 +24,7 @@ import {
 } from "./style";
 
 const Footer = () => {
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
   return (
     <Container>
       <Wrapper>
@@ -32,32 +32,28 @@ const Footer = () => {
           <Wrapper.Wrapper>
             <LogoWrapper>
               <Logo src={logo} alt="logo" />
-              {/* <p>{t("footer.logo")}</p> */}
-              <Title fw>Tasty Treat</Title>
+              <Title fw>{t("navbar.logo")}</Title>
             </LogoWrapper>
-            <Text w>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid,
-              exercitationem?
-            </Text>
+            <Text w>{t("footer.lorem")}</Text>
           </Wrapper.Wrapper>
           <Wrapper.Wrapper>
-            <Title>Delivery Time</Title>
-            <Toptext>Sunday - Thursday</Toptext>
+            <Title>{t("footer.delivery_time")}</Title>
+            <Toptext>{t("footer.sunday")}</Toptext>
             <Text>10:00am - 11:00pm</Text>
-            <Toptext>Friday - Saturday</Toptext>
-            <Text>Off day</Text>
+            <Toptext>{t("footer.friday")}</Toptext>
+            <Text>{t("footer.off")}</Text>
           </Wrapper.Wrapper>
           <Wrapper.Wrapper>
-            <Title>Contact</Title>
-            <Text>Location: ZindaBazar, Sylhet-3100, Bangladesh</Text>
-            <Toptext mt>Phone: 01712345678</Toptext>
-            <Toptext>Email: example@gmail.com</Toptext>
+            <Title>{t("footer.contact")}</Title>
+            <Text>{t("footer.location")}</Text>
+            <Toptext mt>{t("footer.phone")}: 01712345678</Toptext>
+            <Toptext>{t("footer.email")}: example@gmail.com</Toptext>
           </Wrapper.Wrapper>
           <Wrapper.Wrapper>
-            <Title>Newsletter</Title>
-            <Text>Subscribe our newsletter</Text>
+            <Title>{t("footer.newsletter")}</Title>
+            <Text>{t("footer.subscribe")}</Text>
             <InputWrapper>
-              <Input placeholder="Enter your email" type="email" />
+              <Input placeholder={t("footer.email")} type="email" />
               <InputButton>
                 <RiSendPlaneLine className="plane" />
               </InputButton>
@@ -65,12 +61,9 @@ const Footer = () => {
           </Wrapper.Wrapper>
         </Column>
         <Row>
-          <Reserve>
-            Copyright - 2022, website made by Muhibur Rahman. All Rights
-            Reserved.
-          </Reserve>
+          <Reserve>{t("footer.rights")}</Reserve>
           <Follow>
-            <Reserve w>Follow:</Reserve>
+            <Reserve w>{t("footer.follow")}:</Reserve>
             <Icons>
               <Div>
                 <A

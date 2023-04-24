@@ -5,38 +5,35 @@ import { Toptext } from "../../Footer/style";
 import { Img, Section, Wrapper, InputWrapper } from "./style";
 import location from "../../../assets/images/compLocation.jpg";
 import ContactTop from "./ContactTop";
+import { useTranslation } from "react-i18next";
+
 const ContactPage = () => {
+  const { t } = useTranslation();
   return (
     <>
       <ContactTop />
       <Section>
         <Wrapper>
           <Wrapper.Wrapper>
+            <p>{t("contact.lorem")}</p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-              architecto eum totam non exercitationem illum nisi sequi atque
-              blanditiis ea? Officiis culpa vero est adipisci?
+              <Toptext>{t("footer.email")}:</Toptext> example@gmail.com
             </p>
             <p>
-              <Toptext>Email:</Toptext> example@gmail.com
+              <Toptext>{t("footer.phone")}:</Toptext>+3584573968551
             </p>
-            <p>
-              <Toptext>Phone:</Toptext>+3584573968551
-            </p>
-            <Toptext>Naples Office:</Toptext>
-            <p> ZindaBazar, Sylhet-3100, Bangladesh</p>
+            <Toptext>{t("contact.office")}:</Toptext>
+            <p> {t("footer.location")}</p>
             <ul>
-              What you get when asking your question
-              <li>Less than 12 hours response to your question </li>
-              <li>
-                Thoroughtness and expertise and a Certified Exchange Specialist
-              </li>
-              <li>Plan of action summarized in an email follow up</li>
+              {t("contact.ul")}
+              <li>{t("contact.less")} </li>
+              <li>{t("contact.expertise")}</li>
+              <li>{t("contact.plan")}</li>
             </ul>
             <InputWrapper>
-              <Input type="email" placeholder="Email" />
-              <Input type="password" placeholder="Password" />
-              <Button>Send</Button>
+              <Input type="email" placeholder={t("footer.email")} />
+              <Input type="password" placeholder={t("footer.password")} />
+              <Button>{t("contact.send")}</Button>
             </InputWrapper>
           </Wrapper.Wrapper>
           <Img src={location} alt="location" />

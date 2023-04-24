@@ -6,7 +6,7 @@ export const Container = styled.div`
 `
 export const Wrapper = styled.div`
     ${common}
-    border: 2px solid black;
+    margin-top: 20px;
 `
 Wrapper.Foods = styled.h1`
     height: 40px;
@@ -39,4 +39,13 @@ export const Segment = styled.div`
     .ant-segmented-item-selected .ant-segmented-item-label{
         color:var(--red);
     }
+`
+
+export const CardsWrapper = styled.div`
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    gap: 25px;
 `

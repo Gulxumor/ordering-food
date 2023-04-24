@@ -5,16 +5,36 @@ import marsh from "../../../../assets/images/mitchelMarsh.jpg";
 import crock from "../../../../assets/images/stevenCrock.jpg";
 import computer from "../../../../assets/images/compLocation.jpg";
 import { Container, Wrapper, TextWrapper, ImageWrapper } from "./style";
+import { useTranslation } from "react-i18next";
 
-const text =
-  "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatum necessitatibus eveniet quis culpa assumenda nulla sit veritatis nesciunt eligendi veniam, ut, modi quo nihil odit autem laboriosam nisi ipsam?";
-const slider = [
-  { id: 1, text: text, img: john, name: "John Doe" },
-  { id: 2, text: text, img: marsh, name: "Mitchell Marsh" },
-  { id: 3, text: text, img: crock, name: "Steven Crock" },
-];
+function useSlider() {
+  const { t } = useTranslation();
+  const slider = () => [
+    {
+      id: 1,
+      text: t("testimonial.lorem_bottom"),
+      img: john,
+      name: t("testimonial.john"),
+    },
+    {
+      id: 2,
+      text: t("testimonial.lorem_bottom"),
+      img: marsh,
+      name: t("testimonial.mitchell"),
+    },
+    {
+      id: 3,
+      text: t("testimonial.lorem_bottom"),
+      img: crock,
+      name: t("testimonial.steven"),
+    },
+  ];
+  return { slider };
+}
 
 const Testimonial = () => {
+  const { slider } = useSlider();
+  const { t } = useTranslation();
   const [settings] = useState({
     dots: true,
     infinite: true,
@@ -31,19 +51,18 @@ const Testimonial = () => {
       <Wrapper>
         <Wrapper.Top>
           <TextWrapper>
-            <TextWrapper.TopText>Testimonial</TextWrapper.TopText>
+            <TextWrapper.TopText>
+              {t("testimonial.testimonial")}
+            </TextWrapper.TopText>
             <TextWrapper.Title>
-              What our <span>customers are</span> saying
+              {t("testimonial.what")} <span>{t("testimonial.customer")}</span>
+              {t("testimonial.saying")}
             </TextWrapper.Title>
-            <TextWrapper.Desc>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Distinctio quasi qui minus quos sit perspiciatis inventore quis
-              provident placeat fugiat!
-            </TextWrapper.Desc>
+            <TextWrapper.Desc>{t("testimonial.lorem_top")}</TextWrapper.Desc>
           </TextWrapper>
           <div className="mainSliderWrapper">
             <Slider {...settings}>
-              {slider.map(({ id, text, img, name }) => (
+              {slider().map(({ id, text, img, name }) => (
                 <div key={id}>
                   <TextWrapper.Desc>{text}</TextWrapper.Desc>
                   <ImageWrapper>

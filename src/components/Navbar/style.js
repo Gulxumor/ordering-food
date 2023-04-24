@@ -76,14 +76,13 @@ Icons.Select = styled.select`
     font-size: 1rem; 
 `
 export const NavItems = styled.ul`
-    align-items: start;
-    gap: 3rem;
-    display: flex;
+   display: flex;
+   gap:5rem;
 `
 export const NavItem = styled.li`
     list-style-type: none;
     display: flex;
-    gap: 50px;
+    gap: 100px;
 `
 export const Text = styled.p`
     height: 99px;

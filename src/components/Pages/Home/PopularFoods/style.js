@@ -39,6 +39,11 @@ export const Segment = styled.div`
     .ant-segmented-item-selected .ant-segmented-item-label{
         color:var(--red);
     }
+    .wrapper{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 `
 
 export const CardsWrapper = styled.div`
@@ -48,4 +53,8 @@ export const CardsWrapper = styled.div`
     justify-content: space-between;
     flex-wrap:wrap;
     gap: 25px;
+`
+export const Image = styled.img`
+    width: 20px;
+    height: 20px;
 `

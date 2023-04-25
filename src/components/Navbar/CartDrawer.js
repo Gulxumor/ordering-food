@@ -14,10 +14,10 @@ const CartDrawer = () => {
             {
                 cart.map(product => (
                     <div key={product.id}>
-                        {product.img}
+                        {product.img}-----
                         {product.title} ---
                         {product.quantity}---
-                        {product.price}
+                        {product.price}--
                     </div>
                 ))
             }

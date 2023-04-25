@@ -1,4 +1,4 @@
-import { Button, Input } from "antd";
+import { Button, Input, message } from "antd";
 import React from "react";
 import Footer from "../../Footer";
 import { Toptext } from "../../Footer/style";
@@ -9,6 +9,11 @@ import { useTranslation } from "react-i18next";
 
 const ContactPage = () => {
   const { t } = useTranslation();
+
+  const info = () => {
+    message.info("Sent");
+  };
+
   return (
     <>
       <ContactTop />
@@ -33,7 +38,7 @@ const ContactPage = () => {
             <InputWrapper>
               <Input type="email" placeholder={t("footer.email")} />
               <Input type="password" placeholder={t("footer.password")} />
-              <Button>{t("contact.send")}</Button>
+              <Button onClick={info}>{t("contact.send")}</Button>
             </InputWrapper>
           </Wrapper.Wrapper>
           <Img src={location} alt="location" />

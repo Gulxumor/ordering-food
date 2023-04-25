@@ -104,6 +104,7 @@ export const en = {
         expertise: "  Thoroughtness and expertise and a Certified Exchange Specialist",
         plan: "Plan of action summarized in an email follow up",
         send: "Send",
+        sent:"Sent"
     },
     login: {
         login_title: "Login",

@@ -29,8 +29,8 @@ export const uz = {
         wait: "unda ovqatingizni  ",
         door: "kuting ",
         lorem: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui magni delectus tenetur autem, sint veritatis! ",
-        order_now: "Hoziroq buyurtma bering ",
-        see: "Barcha taomlarni koʻrish ",
+        order_now: "Buyurish ",
+        see: "Taomlarni koʻrish ",
         fast_food: "Fastfud ",
         pizza: "Pizza ",
         asian_food: "Osiyo taomlari ",
@@ -41,7 +41,7 @@ export const uz = {
     section: {
         toptext: "Biz nima xizmat qilamiz ",
         deliver: "yetkazib berish ",
-        title: "Faqat uyda o'tiring, sizga biz  ",
+        title: "Siz uyda o'tiring, biz  ",
         care: "g'amxorlik qilamiz ",
         quick: "Tez yetkazib berish ",
         dineIn: "Super ovqatlanish ",
@@ -95,14 +95,6 @@ export const uz = {
         john: "Jon Doe ",
         mitchell: "Mitchell Marsh ",
     },
-    routes: {
-        home: "/uy ",
-        foods: "/ovqatlar ",
-        cart: "/karta ",
-        contact: "/aloqa ",
-        login: "/tizimga kirish ",
-        register: "/ro'yxatdan o'tish ",
-    },
     contact: {
         lorem: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab architecto eum totam non exercitationem illum nisi sequi atque blanditiis ea? Officiis culpa vero est adipisci? ",
         office: "Neapol idorasi ",
@@ -111,6 +103,7 @@ export const uz = {
         expertise: "Aniqlik va tajriba va sertifikatlangan almashinuv mutaxassisi ",
         plan: "Harakatlar rejasi elektron pochta xabarida umumlashtiriladi ",
         send: "Jo'natish ",
+        sent:"Jo'natildi",
     },
     login: {
         login_title: "Tizimga kirish ",
@@ -128,7 +121,7 @@ export const uz = {
         product: "Mahsulot ",
     },
     cart: {
-        looking: "Men qidiryapman ",
+        looking: "Men qidiryapman ... ",
         default: "Standart ",
         alpha: "Alifbo tartibida ",
         high: "Yuqori narx ",

@@ -12,7 +12,7 @@ import {
 import logo from "../../assets/images/logo.jpg";
 import { RiShoppingBasketLine } from "react-icons/ri";
 import { AiOutlineUser } from "react-icons/ai";
-import UseNavbar, { navbar } from "../../utils/mock";
+import UseNavbar from "../../utils/mock";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import i18next from "i18next";
 import { useDispatch, useSelector } from "react-redux";

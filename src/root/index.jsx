@@ -8,6 +8,7 @@ import { ru } from "../locale/ru/translation";
 import { ar } from "../locale/ar/translation";
 import { en } from "../locale/en/translation";
 import { uz } from "../locale/uz/translation";
+import NotFound from "../components/NotFound";
 
 const Root = () => {
   const token = JSON.parse(localStorage.getItem("token"));
@@ -52,7 +53,7 @@ const Root = () => {
               )
           )}
         </Route>
-        {/* <Route path="*" element={<NotFound />} /> */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

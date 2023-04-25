@@ -118,9 +118,9 @@ export const Reserve = styled.p`
     font-size: 12px;
     font-weight: 400;
     color:${({ w }) => w ? "var(--black)" :"var(--red)"};
+    margin-right:${({ w }) => w ? "10px" :""};
     line-height: 19px;
     height: 19px;
-    width: ${({ w }) => w ? "50px" : "400px"};
     display: flex;
     align-items: center;
 `

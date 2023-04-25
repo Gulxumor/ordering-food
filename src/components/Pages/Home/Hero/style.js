@@ -109,7 +109,7 @@ export const Div = styled.div`
     }
 
     .text{
-        width: 156px;
+        width: 200px;
         height: 33px;
         color: var(--blue);
         font-weight: 600;
@@ -160,7 +160,6 @@ Container.HeroFooter.FooterWrapper.Content.Image = styled.img`
     border-radius: 50%;
 `
 Container.HeroFooter.FooterWrapper.Content.Text = styled.p`
-    width: 80px;
     height: 19px;
     font-weight: 500;
     line-height: 19px;

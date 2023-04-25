@@ -1,7 +1,6 @@
 import CartPage from "../components/Pages/CartPage";
 import ContactPage from "../components/Pages/ContactPage";
 import FoodsPage from "../components/Pages/Foods";
-import Footer from "../components/Footer";
 import Home from "../components/Pages/Home";
 import Login from "../components/Pages/Login/Login";
 import Register from "../components/Pages/Login/Register";
@@ -64,14 +63,6 @@ function UseNavbar() {
             title: 'Register',
             path: "/register",
             element: <Register />,
-            isPrivate: false,
-            hidden: true,
-        },
-        {
-            id: 7,
-            title: 'Footer',
-            path: '*',
-            element: <Footer />,
             isPrivate: false,
             hidden: true,
         },

@@ -70,7 +70,7 @@ export const Icons = styled.div`
     font-size:20px;
     cursor: pointer;
 `
-Icons.Select = styled.select`
+export const Select = styled.select`
     border: none;
     width: 50px;
     font-size: 1rem; 

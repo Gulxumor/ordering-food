@@ -1,4 +1,14 @@
 import React from "react";
+import logo from "../../assets/images/logo.jpg";
+import { RiShoppingBasketLine } from "react-icons/ri";
+import { AiOutlineUser } from "react-icons/ai";
+import UseNavbar from "../../utils/mock";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setCartDrawerVisibility } from "../../store/DrawerSlice";
+import CartDrawer from "./CartDrawer";
+import { useTranslation } from "react-i18next";
+import LangSelect from "./LangSelect";
 import {
   Container,
   Icons,
@@ -9,16 +19,6 @@ import {
   Title,
   Wrapper,
 } from "./style";
-import logo from "../../assets/images/logo.jpg";
-import { RiShoppingBasketLine } from "react-icons/ri";
-import { AiOutlineUser } from "react-icons/ai";
-import UseNavbar from "../../utils/mock";
-import { NavLink, Outlet, useNavigate } from "react-router-dom";
-import i18next from "i18next";
-import { useDispatch, useSelector } from "react-redux";
-import { setCartDrawerVisibility } from "../../store/DrawerSlice";
-import CartDrawer from "./CartDrawer";
-import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const { navbar } = UseNavbar();
@@ -56,19 +56,8 @@ const Navbar = () => {
           </NavItems>
 
           <Icons>
-            <Icons.Select
-              defaultValue={localStorage.getItem("locale")}
-              onChange={(e) => {
-                i18next.changeLanguage(e.target.value);
-                localStorage.setItem("locale", e.target.value);
-                window.location.reload()
-              }}
-            >
-              <option value="en">EN</option>
-              <option value="ar">AR</option>
-              <option value="uz">UZ</option>
-              <option value="ru">RU</option>
-            </Icons.Select>
+            {/* //!  selection is here */}
+            <LangSelect />
             <RiShoppingBasketLine
               className="nav-icon"
               onClick={() => dispatch(setCartDrawerVisibility())}
@@ -80,6 +69,8 @@ const Navbar = () => {
           </Icons>
         </Wrapper>
       </Container>
+
+      {/* //!  Drawer is here */}
       <CartDrawer />
       <Outlet />
     </>

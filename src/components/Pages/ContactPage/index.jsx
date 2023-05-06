@@ -11,7 +11,7 @@ const ContactPage = () => {
   const { t } = useTranslation();
 
   const info = () => {
-    message.info("Sent");
+    message.success("Sent");
   };
 
   return (

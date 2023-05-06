@@ -50,3 +50,6 @@ Wrapper.Bottom = styled.div`
     gap: 25px;
     justify-content: space-between;
 `
+Wrapper.Paginate = styled.div`
+    margin: 50px 0 20px 10px; 
+`

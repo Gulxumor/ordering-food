@@ -11,7 +11,7 @@ import { uz } from "../locale/uz/translation";
 import NotFound from "../components/NotFound";
 
 const Root = () => {
-  const token = JSON.parse(localStorage.getItem("token"));
+  let token = JSON.stringify(localStorage.getItem("token"));
 
   //! language ni localstorage ga set qilish
   useEffect(() => {

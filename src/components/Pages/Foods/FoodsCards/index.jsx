@@ -5,9 +5,10 @@ import { Card } from "../../../Generics/Card";
 import { products } from "../../../../utils/products";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Pagination } from "antd";
 
 const FoodsCards = () => {
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   const [search, setSearch] = useState("");
   return (
     <Section>
@@ -46,6 +47,9 @@ const FoodsCards = () => {
               <Card f key={id} img={img} title={title} price={price} id={id} />
             ))}
         </Wrapper.Bottom>
+        <Wrapper.Paginate>
+          <Pagination defaultCurrent={1} total={50} />
+        </Wrapper.Paginate>
       </Wrapper>
     </Section>
   );

@@ -1,14 +1,25 @@
-import React from 'react'
-// import { useTranslation } from "react-i18next";
+import React from "react";
 import { useParams } from "react-router-dom";
+import { products } from "../../utils/products";
+import Button from "../Generics/Button";
 
 const Product = () => {
-  // const { t } = useTranslation();
   const param = useParams();
-  console.log(param.id);
-  return <div>
-    <h1>Product</h1>
-  </div>;
+  const productInfo = products.filter(({ id }) => +param.id === id)[0];
+  // console.log(productInfo);
+
+  return (
+    <div>
+      <h1>Product</h1>
+      <div>{productInfo.img}</div>
+      <div>{productInfo.img}</div>
+      <div>{productInfo.price}</div>
+      <div>{productInfo.title}</div>
+      <div>{productInfo.desc}</div>
+      <div>{productInfo.category}</div>
+      <Button type={"primary"}>Add to Cart</Button>
+    </div>
+  );
 };
 
-export default Product
+export default Product;

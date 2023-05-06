@@ -29,7 +29,7 @@ function UseNavbar() {
         {
             id: 8,
             title: 'Product',
-            path: '/foods/:id',
+            path: '/shop/:id',
             element: <Product />,
             isPrivate: true,
             hidden: true,

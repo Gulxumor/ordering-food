@@ -7,7 +7,7 @@ const CartDrawer = () => {
     const dispatch = useDispatch()
     const { cartDrawerVisibility } = useSelector((state) => state.cartDrawer)
     const { cart } = useSelector((state) => state.productsSlice)
-    console.log(cart);
+    // console.log(cart);
     return (
 
         <Drawer title="Basic Drawer" placement="right" onClose={() => dispatch(setCartDrawerVisibility())} open={cartDrawerVisibility} closable="false">

@@ -11,7 +11,6 @@ import { useTranslation } from "react-i18next";
 
 const SegmentedSection = () => {
   const { products } = useSelector((state) => state.productsSlice);
-  console.log(products);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const category = products.filter((product) =>
     selectedCategory === "All"
@@ -20,7 +19,6 @@ const SegmentedSection = () => {
       ? product
       : null
   );
-  console.log(category);
   const {t} = useTranslation()
   return (
     <>

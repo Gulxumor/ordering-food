@@ -1,17 +1,10 @@
 import React from "react";
-import {
-  Container,
-  Content,
-  ImageWrapper,
-  Wrapper,
-  Title,
-  Price,
-} from "./style";
 import Button from "../Button";
 import { ADD_PRODUCT } from "../../../store/ProductsSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Container, Content, Wrapper, Title, Price } from "./style";
 
 export const Card = ({ id, title, img, price }) => {
   const navigate = useNavigate();
@@ -19,11 +12,11 @@ export const Card = ({ id, title, img, price }) => {
   const { t } = useTranslation();
   return (
     <Container>
-      <ImageWrapper>
-        <ImageWrapper.Image src={img} alt={title || "card"} loading="lazy" />
-      </ImageWrapper>
+      <Container.ImageWrapper>
+        <Container.ImageWrapper.Image src={img} alt={title || "card"} />
+      </Container.ImageWrapper>
       <Wrapper>
-        <Title onClick={() => navigate(`/foods/${id}`)}>{title}</Title>
+        <Title onClick={() => navigate(`/shop/${id}`)}>{title}</Title>
         <Content>
           <Price>${price}</Price>
           <Button

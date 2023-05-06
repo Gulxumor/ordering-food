@@ -1,18 +1,6 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  /* button {
-    opacity: 0;
-  }
-  :hover {
-    button {
-      opacity: 1;
-    } 
-    img {
-      opacity: 0.8;
-    }
-  }  */
-
   display: flex;
   height: 293px;
   width: ${({ f }) => f ? "294px" : "306px"};
@@ -20,9 +8,9 @@ const Container = styled.div`
   text-align: center;
   flex-direction: column;
 
-   img:hover{
-     padding: 0;
-    }
+  img:hover{
+    padding: 0;
+   }
 `
 const Wrapper = styled.div`
   display: flex;
@@ -31,10 +19,10 @@ const Wrapper = styled.div`
   padding: 30px;
   cursor: pointer;
 `
-const ImageWrapper = styled.div`
+Container.ImageWrapper = styled.div`
   margin-top: 20px;
 `
-ImageWrapper.Image = styled.img`
+Container.ImageWrapper.Image = styled.img`
   width: 170px;
   height: 170px;
   padding: 10px;
@@ -64,4 +52,4 @@ const Price = styled.h4`
 
 
 
-export { Container, Wrapper, ImageWrapper, Content, Title, Price }
+export { Container, Wrapper, Content, Title, Price }

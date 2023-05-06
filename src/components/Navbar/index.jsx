@@ -26,7 +26,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { cartDrawerVisibility } = useSelector((state) => state.cartDrawer);
-  console.log(cartDrawerVisibility, "drawer");
+  // console.log(cartDrawerVisibility, "drawer");
   return (
     <>
       <Container>

@@ -3,13 +3,15 @@ import { products } from "../../utils/products";
 
 const productsSlice = createSlice({
     name: "products",
-    initialState: { products: products || [], cart: [] },
+    initialState: { products: products, cart: [] },
     reducers: {
         ADD_PRODUCT: (state, action) => {
-            const res = state.products.filter(product => product.id === action.payload.product_id)
+            const res = products.filter(product => product.id === action.payload.product_id)
             const productExist = state.cart.map(product => product.id === action.payload.product_id ? { ...product, quantity: product.quantity + 1 } : product)
-            if (res.length > 1) {
-                state.cart = productExist
+
+            if (state.cart.length > 0) {
+                state.cart = [...state.cart, productExist]
+                console.log(productExist);
             }
             else {
                 state.cart = [...state.cart, res[0]]

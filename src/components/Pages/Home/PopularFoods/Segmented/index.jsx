@@ -1,4 +1,3 @@
-import React from "react";
 import { Segmented } from "antd";
 import { CardsWrapper, Image, Segment } from "../style";
 import burger from "../../../../../assets/images/burgerSection.png";
@@ -24,9 +23,10 @@ const SegmentedSection = () => {
     <>
       <Segment>
         <Segmented
+          block
           size="large"
           options={[
-           t("popular_foods.all"),
+            t("popular_foods.all"),
             {
               label: (
                 <div className="wrapper">
@@ -68,5 +68,3 @@ const SegmentedSection = () => {
 };
 
 export default SegmentedSection;
-
-// ["All", "Burger", "Pizza", "Bread"]

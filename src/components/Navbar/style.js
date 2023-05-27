@@ -88,13 +88,48 @@ export const Text = styled.p`
     height: 99px;
     line-height: 100px;
     font-size: 22px;
-width: 44px;
+    width: 44px;
     text-decoration-style: solid;
     transition: .3s;
     font-weight: 600;
     font-size: 1rem;
     color:var(--blue);
 `
+
+export const DrawerWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+     .main{
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .divcha{
+        display: flex;
+        width: 50%;
+        gap: 30px;
+    }
+    
+    .x{
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .subtotal{
+        width: 100%;
+        background-color: #df2020;
+        color: white;
+    }
+
+`
+DrawerWrapper.Img = styled.img`
+    width: 35px;
+    height: 35px;
+`
+
 // @media(max - width: 1300px) { }
 // @media(max - width: 1200px) { }
 // @media(max - width: 1050px) { }

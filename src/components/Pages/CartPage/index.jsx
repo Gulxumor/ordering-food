@@ -20,7 +20,7 @@ const CartPage = () => {
               <th>Price</th>
               <th>Quantity</th>
               <th>Delete</th>
-            </tr>kecha dadam bo'g'ilib qolib G2 dan boshqa hamma guruppayu kanallarimni ochirib yuboribdi. Faqat siz va Islombek ustoz
+            </tr>
             <tr>
               <td className="img">
                 <img src={v.img} alt={v.title} />

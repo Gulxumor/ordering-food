@@ -1,4 +1,3 @@
-import React from 'react'
 import { useSelector } from "react-redux";
 import CardsTop from "./CardsTop";
 import { Container } from "./style";

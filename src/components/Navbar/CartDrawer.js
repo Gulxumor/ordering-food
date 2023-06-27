@@ -1,5 +1,4 @@
 import { Drawer } from 'antd'
-import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setCartDrawerVisibility } from '../../store/DrawerSlice'
 import { DrawerWrapper } from './style'
